@@ -145,7 +145,7 @@ Use the removeFlavorByName function below to do the following:
 
 function removeFlavorByName(array, flavorString){
     for(let i=0; i< array.length; i++){
-      if(array[i].includes(flavorString)){
+      if(array[i] === flavorString){
         array.splice(i, 1);
       } 
       }
@@ -176,14 +176,17 @@ Use the filterByWord function below to do the following:
 
   DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
-//2 parameters array, string
-function filterByWord(/*your code here*/){
-  /*your code here*/
-  //create filteredArray
-  //loop through og array to check each string
-  //if item includes string i want to push to filtered array
+
+function filterByWord(array, string){
+  const filteredFlavors = []
+  for(let i=0; i < array.length; i++){
+    if(array[i].includes(string)){
+      filteredFlavors.push(array[i])
+    }
+  }
+  return filteredFlavors
 }
-//outside of array return array
+
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
